@@ -10,6 +10,7 @@ import {
 // Components
 import { Post, Project } from "../components";
 import { useOutletContext } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const [projects, setProjects] = useState([
@@ -43,12 +44,12 @@ const Home = () => {
     <main className="flex flex-col gap-14">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-4 md:w-4/5">
-          <div className="flex gap-2 text-2xl">
+          <div className="flex gap-2 text-2xl mp:text-xl">
             <h1 className="font-bold">Hi there, I'm</h1>
             <h1 className="font-bold text-blue-400">Faisal 👋</h1>
           </div>
           <div className="flex flex-col gap-3">
-            <h1 className="font-bold text-lg">
+            <h1 className="font-bold text-lg mp:text-md">
               Full stack developer: Builds both front-end and back-end of web
               applications.
             </h1>
@@ -98,17 +99,17 @@ const Home = () => {
       </div>
       <div className="post-wrapper flex flex-col gap-4">
         <div className="title-wrapper flex justify-between items-center">
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center mp:gap-0 mp:items-center">
             <h1 className="font-bold text-2xl">Recent</h1>
             <h1 className="font-bold text-2xl text-blue-400">Posts</h1>
           </div>
           <div>
-            <a
-              href="/blogs"
+            <NavLink
+              to={"/blogs"}
               className="flex items-center gap-2 text-sm hover:underline"
             >
               View all posts <AiOutlineArrowRight />
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className="flex flex-col gap-4 md:flex-row md:justify-around">
