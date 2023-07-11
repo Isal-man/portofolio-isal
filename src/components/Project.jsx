@@ -1,6 +1,8 @@
-const Project = ({ id, name, description, icon}) => {
+import { NavLink } from "react-router-dom";
+
+const Project = ({ id, name, description, icon, link}) => {
   return (
-    <div className="project-wrapper card flex flex-col justify-center items-center gap-4 md:flex-row">
+    <NavLink className="project-wrapper card flex flex-col justify-center items-center gap-4 md:flex-row" to={link} >
       <img
         src={icon}
         alt={name}
@@ -10,7 +12,7 @@ const Project = ({ id, name, description, icon}) => {
         <h1 className="text-xl font-bold">{name}</h1>
         <p>{description}</p>
       </div>
-    </div>
+    </NavLink>
   );
 };
 
