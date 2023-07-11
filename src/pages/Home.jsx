@@ -36,6 +36,7 @@ const Home = () => {
       icon: "/logo-smartphone-blog.png",
       description:
         "The Ultimate Smartphone Blog: Unleashing the latest in mobile technology! Stay updated on cutting-edge devices, expert reviews, industry news, and tips for optimizing your smartphone experience. Discover the future of communication in concise and engaging articles, all in one place.",
+      link: "https://github.com/Isal-man/smartphone-blog",
     },
   ]);
   const [blogs, setBlogs] = useOutletContext();
@@ -74,7 +75,9 @@ const Home = () => {
                 "https://www.linkedin.com/in/ahmad-faisal-hidayat-05a909245/",
               ],
             ].map(([icons, url], i) => (
-              <a key={i} href={url}>{icons}</a>
+              <a key={i} href={url}>
+                {icons}
+              </a>
             ))}
           </div>
         </div>
@@ -114,7 +117,11 @@ const Home = () => {
         </div>
         <div className="flex flex-col gap-4 md:flex-row md:justify-around">
           {blogs
-            .filter((_blog, i) => i < 3 * Math.ceil(blogs.length / 3) && i >= 3 * Math.ceil(blogs.length / 3) - 3)
+            .filter(
+              (_blog, i) =>
+                i < 3 * Math.ceil(blogs.length / 3) &&
+                i >= 3 * Math.ceil(blogs.length / 3) - 3
+            )
             .map((blog) => (
               <Post key={blog.id} {...blog} />
             ))}
