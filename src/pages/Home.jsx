@@ -67,7 +67,7 @@ const Home = () => {
             {[
               [
                 <AiOutlineWhatsApp size={40} color="green" />,
-                "https://wa.me/081287968635",
+                "https://wa.me/082187968635",
               ],
               [<AiFillGithub size={40} />, "https://github.com/Isal-man"],
               [
