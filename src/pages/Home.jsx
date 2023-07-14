@@ -67,7 +67,7 @@ const Home = () => {
             {[
               [
                 <AiOutlineWhatsApp size={40} color="green" />,
-                "https://wa.me/082187968635",
+                "https://wa.me/+6281287968635",
               ],
               [<AiFillGithub size={40} />, "https://github.com/Isal-man"],
               [
@@ -100,7 +100,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="post-wrapper flex flex-col gap-4">
+      {/* <div className="post-wrapper flex flex-col gap-4">
         <div className="title-wrapper flex justify-between items-center">
           <div className="flex gap-2 items-center">
             <h1 className="font-bold text-2xl">Recent</h1>
@@ -126,7 +126,7 @@ const Home = () => {
               <Post key={blog.id} {...blog} />
             ))}
         </div>
-      </div>
+      </div> */}
     </main>
   );
 };
