@@ -91,7 +91,7 @@ const Home = () => {
         </div>
       </div>
       <div className="project-wrapper flex flex-col gap-4">
-        <div className="title-wrapper flex justify-between items-center">
+        <div className="title-wrapper flex flex-col md:flex-row justify-between items-center">
           <div className="flex gap-2">
             <h1 className="font-bold text-2xl">Recent</h1>
             <h1 className="font-bold text-2xl text-blue-400">Projects</h1>
