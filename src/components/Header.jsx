@@ -14,7 +14,7 @@ const Header = () => {
       <div className="pages-wrapper flex gap-4">
         {
           [
-            ["Blogs", "/blogs"],
+            ["CV", "/cv"],
             ["GitHub", "https://github.com/Isal-man"],
             ["LinkedIn", "https://www.linkedin.com/in/ahmad-faisal-hidayat-05a909245/"]
           ].map(([title, url], i) => (

@@ -8,8 +8,7 @@ import App from './App.jsx'
 // css
 import './index.css'
 import Home from './pages/Home.jsx'
-import Blogs from './pages/Blogs.jsx'
-import BlogPage from './pages/BlogPage.jsx'
+import CV from './pages/CV.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,18 +19,9 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/blogs",
-        element: <Blogs />,
+        path: "/cv",
+        element: <CV />,
       },
-      {
-        path: "/blog/",
-        children: [
-          {
-            path: ":blogId",
-            element: <BlogPage />
-          }
-        ]
-      }
     ]
   },
 ])

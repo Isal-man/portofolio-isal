@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 
 // Components
-import { Post, Project } from "../components";
+import { Project } from "../components";
 import { useOutletContext } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
@@ -39,7 +39,8 @@ const Home = () => {
       link: "https://github.com/Isal-man/smartphone-blog",
     },
   ]);
-  const [blogs, setBlogs] = useOutletContext();
+  const [mail, setMail] = useState("");
+  const [textMail, setTextMail] = useState("");
 
   return (
     <main className="flex flex-col gap-14">
@@ -90,15 +91,57 @@ const Home = () => {
         </div>
       </div>
       <div className="project-wrapper flex flex-col gap-4">
-        <div className="title-wrapper flex gap-2">
-          <h1 className="font-bold text-2xl">Recent</h1>
-          <h1 className="font-bold text-2xl text-blue-400">Projects</h1>
+        <div className="title-wrapper flex justify-between items-center">
+          <div className="flex gap-2">
+            <h1 className="font-bold text-2xl">Recent</h1>
+            <h1 className="font-bold text-2xl text-blue-400">Projects</h1>
+          </div>
+          <small>(Click if you wanna see my project repo)</small>
         </div>
         <div className="project-content flex flex-col gap-4">
           {projects.map((project) => (
             <Project key={project.id} {...project} />
           ))}
         </div>
+      </div>
+      <div className="card flex flex-col gap-2">
+        <h1 className="font-bold text-2xl">Contact Me</h1>
+        <form
+          className="flex flex-col gap-4"
+          onSubmit={() => alert("Thank for you letter😊")}
+        >
+          <label>
+            Email:
+            <input
+              type="email"
+              className="h-10 p-4"
+              value={mail}
+              onChange={(e) => setMail(e.target.value)}
+            />
+          </label>
+          <label>
+            Letter:
+            <textarea
+              cols="2"
+              rows="2"
+              className="p-2"
+              style={{ resize: "none" }}
+              value={textMail}
+              onChange={(e) => setTextMail(e.target.value)}
+            ></textarea>
+          </label>
+          <div className="flex gap-4">
+            <button
+              type="reset"
+              className="bg-red-500 border border-red-500 p-2 rounded-lg hover:bg-transparent hover:cursor-pointer hover:border"
+            >
+              Cancel
+            </button>
+            <button className="bg-green-500 border border-green-500 p-2 rounded-lg hover:bg-transparent hover:cursor-pointer hover:border">
+              Send
+            </button>
+          </div>
+        </form>
       </div>
       {/* <div className="post-wrapper flex flex-col gap-4">
         <div className="title-wrapper flex justify-between items-center">
