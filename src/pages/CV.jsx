@@ -54,7 +54,7 @@ const CV = () => {
             </li>
             <li>
               <h3 className="text-xl font-bold">MAN 3 Tangerang</h3>
-              <small>(2019 - 2021)</small>
+              <small>(2018 - 2021)</small>
             </li>
           </ul>
         </div>
