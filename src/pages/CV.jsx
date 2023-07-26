@@ -15,9 +15,9 @@ const CV = () => {
           className="object-cover h-1/2 w-1/2 rounded-full"
         />
         <p className="flex flex-col items-center">
-          <div className={`${theme === "dark" ? "text-white" : "text-black"}`}>
+          <span className={`${theme === "dark" ? "text-white" : "text-black"}`}>
             <MdLocationPin size={48} />
-          </div>
+          </span>
           Perum Rajeg Asri, Rajeg, Kab.Tangerang, Banten, Indonesia
         </p>
       </div>
