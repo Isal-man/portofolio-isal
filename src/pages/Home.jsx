@@ -104,7 +104,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="card flex flex-col gap-2">
+      <div className="card flex flex-col gap-2 text-white">
         <h1 className="font-bold text-2xl">Contact Me</h1>
         <form
           className="flex flex-col gap-4"

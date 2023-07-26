@@ -1,7 +1,11 @@
 // Icons
+import { useContext } from "react";
 import { MdLocationPin } from "react-icons/md";
+import { ThemeContext } from "../App";
 
 const CV = () => {
+  const { theme } = useContext(ThemeContext)
+
   return (
     <main className="flex flex-col gap-4">
       <div className="flex flex-col items-center gap-4">
@@ -11,14 +15,16 @@ const CV = () => {
           className="object-cover h-1/2 w-1/2 rounded-full"
         />
         <p className="flex flex-col items-center">
-          <MdLocationPin size={48} style={{ color: "white" }} /> Perum Rajeg
-          Asri, Rajeg, Kab.Tangerang, Banten, Indonesia
+          <div className={`${theme === "dark" ? "text-white" : "text-black"}`}>
+            <MdLocationPin size={48} />
+          </div>
+          Perum Rajeg Asri, Rajeg, Kab.Tangerang, Banten, Indonesia
         </p>
       </div>
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold">Trainings</h1>
         <hr />
-        <div className="card">
+        <div className="card text-white">
           <ul className="p-4 flex flex-col gap-2">
             <li>
               <h3 className="text-xl font-bold">Logic and Algorithms</h3>
@@ -46,7 +52,7 @@ const CV = () => {
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold">Educations</h1>
         <hr />
-        <div className="card">
+        <div className="card text-white">
           <ul className="p-4 flex flex-col gap-2">
             <li>
               <h3 className="text-xl font-bold">Pasim National University</h3>
@@ -62,7 +68,7 @@ const CV = () => {
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold">Organizations</h1>
         <hr />
-        <div className="card">
+        <div className="card text-white">
           <ul className="p-4 flex flex-col gap-2">
             <li>
               <h3 className="text-xl font-bold">
@@ -82,7 +88,7 @@ const CV = () => {
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold">Skills</h1>
         <hr />
-        <div className="card">
+        <div className="card text-white">
           <ul className="p-4 flex flex-col gap-2">
             <li>
               <h3 className="text-xl font-bold">Backend Developer</h3>
