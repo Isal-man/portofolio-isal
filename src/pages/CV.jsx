@@ -14,7 +14,7 @@ const CV = () => {
           src="/IMG_20230521_085205_323.jpg"
           className="object-cover h-1/2 w-1/2 rounded-full"
         />
-        <p className="flex flex-col items-center">
+        <p className="flex flex-col items-center text-center">
           <span className={`${theme === "dark" ? "text-white" : "text-black"}`}>
             <MdLocationPin size={48} />
           </span>
