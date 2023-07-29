@@ -1,10 +1,10 @@
 // Icons
 import { useContext } from "react";
 import { MdLocationPin } from "react-icons/md";
-import { ThemeContext } from "../App";
+import { ThemeContext, translate } from "../App";
 
 const CV = () => {
-  const { theme } = useContext(ThemeContext)
+  const { theme, language } = useContext(ThemeContext)
 
   return (
     <main className="flex flex-col gap-4">
@@ -22,7 +22,7 @@ const CV = () => {
         </p>
       </div>
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-bold">Trainings</h1>
+        <h1 className="text-3xl font-bold">{translate[language].trainings}</h1>
         <hr />
         <div className="card text-white">
           <ul className="p-4 flex flex-col gap-2">
@@ -50,7 +50,7 @@ const CV = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-bold">Educations</h1>
+        <h1 className="text-3xl font-bold">{translate[language].educations}</h1>
         <hr />
         <div className="card text-white">
           <ul className="p-4 flex flex-col gap-2">
@@ -66,7 +66,7 @@ const CV = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-bold">Organizations</h1>
+        <h1 className="text-3xl font-bold">{translate[language].organizations}</h1>
         <hr />
         <div className="card text-white">
           <ul className="p-4 flex flex-col gap-2">
@@ -86,7 +86,7 @@ const CV = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-bold">Skills</h1>
+        <h1 className="text-3xl font-bold">{translate[language].skills}</h1>
         <hr />
         <div className="card text-white">
           <ul className="p-4 flex flex-col gap-2">

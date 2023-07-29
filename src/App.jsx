@@ -9,13 +9,45 @@ import { createContext } from "react";
 export const ThemeContext = createContext({
   theme: null,
   setTheme: () => {},
+  language: null,
+  setLanguage: () => {}
 });
+
+export const translate = {
+  id: {
+    hello: "Halo guys, saya",
+    click: "Tekan jika ingin melihat repo projek saya",
+    contact: "Hubungi Saya",
+    letter: "Surat",
+    cancel: "Batal",
+    send: "Kirim",
+    message: "Terima kasih atas suratnya",
+    trainings: "Pelatihan",
+    educations: "Pendidikan",
+    organizations: "Organisasi",
+    skills: "Keahlian"
+  },
+  en: {
+    hello: "Hello there, I'm",
+    click: "Click if you wanna see my project repo",
+    contact: "Contact Me",
+    letter: "Letter",
+    cancel: "Cancel",
+    send: "Send",
+    message: "Thank you for letter",
+    trainings: "Trainings",
+    educations: "Educations",
+    organizations: "Organizations",
+    skills: "Skills"
+  }
+}
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
+  const [language, setLanguage] = useState("en");
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme, language, setLanguage }}>
       <div className={`app-wrapper flex flex-col items-center h-full w-full ${theme === "dark" ? "bg-slate-800 text-white" : "bg-gray-100 text-black"}`}>
         <div className="header-wrapper max-w-screen-lg sm:w-full">
           <Header />

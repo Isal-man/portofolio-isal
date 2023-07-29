@@ -11,6 +11,8 @@ import {
 import { Project } from "../components";
 import { useOutletContext } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext, translate } from "../App";
 
 const Home = () => {
   const [projects, setProjects] = useState([
@@ -41,15 +43,13 @@ const Home = () => {
   ]);
   const [mail, setMail] = useState("");
   const [textMail, setTextMail] = useState("");
+  const { language } = useContext(ThemeContext);
 
   return (
     <main className="flex flex-col gap-14">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-4 md:w-4/5">
-          <div className="flex gap-2 text-2xl">
-            <h1 className="font-bold">Hi there, I'm</h1>
-            <h1 className="font-bold text-blue-400">Faisal 👋</h1>
-          </div>
+            <h1 className="font-bold text-3xl">{translate[language].hello} <span className="text-blue-400">Faisal 👋</span></h1>
           <div className="flex flex-col gap-3">
             <h1 className="font-bold text-lg">
               Full stack developer: Builds both front-end and back-end of web
@@ -96,7 +96,7 @@ const Home = () => {
             <h1 className="font-bold text-2xl">Recent</h1>
             <h1 className="font-bold text-2xl text-blue-400">Projects</h1>
           </div>
-          <small>(Click if you wanna see my project repo)</small>
+          <small>({translate[language].click})</small>
         </div>
         <div className="project-content flex flex-col gap-4">
           {projects.map((project) => (
@@ -105,10 +105,10 @@ const Home = () => {
         </div>
       </div>
       <div className="card flex flex-col gap-2 text-white">
-        <h1 className="font-bold text-2xl">Contact Me</h1>
+        <h1 className="font-bold text-2xl">{translate[language].contact}</h1>
         <form
           className="flex flex-col gap-4"
-          onSubmit={() => alert("Thank for you letter😊")}
+          onSubmit={() => alert(`${translate[language].message}😊`)}
         >
           <label>
             Email:
@@ -120,7 +120,7 @@ const Home = () => {
             />
           </label>
           <label>
-            Letter:
+          {translate[language].letter}:
             <textarea
               cols="2"
               rows="2"
@@ -135,41 +135,14 @@ const Home = () => {
               type="reset"
               className="bg-red-500 border border-red-500 p-2 rounded-lg hover:bg-transparent hover:cursor-pointer hover:border"
             >
-              Cancel
+              {translate[language].cancel}
             </button>
             <button className="bg-green-500 border border-green-500 p-2 rounded-lg hover:bg-transparent hover:cursor-pointer hover:border">
-              Send
+            {translate[language].send}
             </button>
           </div>
         </form>
       </div>
-      {/* <div className="post-wrapper flex flex-col gap-4">
-        <div className="title-wrapper flex justify-between items-center">
-          <div className="flex gap-2 items-center">
-            <h1 className="font-bold text-2xl">Recent</h1>
-            <h1 className="font-bold text-2xl text-blue-400">Posts</h1>
-          </div>
-          <div>
-            <NavLink
-              to={"/blogs"}
-              className="flex items-center gap-2 text-sm hover:underline"
-            >
-              View all posts <AiOutlineArrowRight />
-            </NavLink>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4 md:flex-row md:justify-around">
-          {blogs
-            .filter(
-              (_blog, i) =>
-                i < 3 * Math.ceil(blogs.length / 3) &&
-                i >= 3 * Math.ceil(blogs.length / 3) - 3
-            )
-            .map((blog) => (
-              <Post key={blog.id} {...blog} />
-            ))}
-        </div>
-      </div> */}
     </main>
   );
 };

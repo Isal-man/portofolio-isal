@@ -9,7 +9,7 @@ import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 import { ThemeContext } from "../App";
 
 const Header = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme, language, setLanguage } = useContext(ThemeContext);
 
   return (
     <header className="flex flex-col gap-8 justify-around w-full p-10 sm:flex-row sm:items-center sm:justify-between">
@@ -39,6 +39,11 @@ const Header = () => {
             <BsMoonStarsFill />
           </button>
         )}
+        <select value={language} className={`${theme === "dark" ? "bg-white text-black" : "bg-slate-800 text-white"} rounded-lg p-2`} onChange={(e) => setLanguage(e.target.value)}>
+          <option hidden selected>Pilih Bahasa</option>
+          <option value="id">Indonesia</option>
+          <option value="en">English</option>
+        </select>
       </div>
     </header>
   );
