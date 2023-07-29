@@ -43,6 +43,7 @@ const Header = () => {
           <option hidden selected>Pilih Bahasa</option>
           <option value="id">Indonesia</option>
           <option value="en">English</option>
+          <option value="kr">Korea</option>
         </select>
       </div>
     </header>

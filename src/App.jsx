@@ -39,6 +39,19 @@ export const translate = {
     educations: "Educations",
     organizations: "Organizations",
     skills: "Skills"
+  },
+  kr: {
+    hello: "안녕하세요, 저는",
+    click: "내 프로젝트 저장소를 보려면 클릭하세요.",
+    contact: "저에게 연락",
+    letter: "편지",
+    cancel: "취소",
+    send: "보내다",
+    message: "편지 감사합니다",
+    trainings: "교육",
+    educations: "교육",
+    organizations: "조직",
+    skills: "기술"
   }
 }
 
