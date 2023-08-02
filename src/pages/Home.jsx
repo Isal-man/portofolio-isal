@@ -18,27 +18,18 @@ const Home = () => {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      name: "Kpop-Blog",
-      icon: "/kpop-blog.png",
+      name: "Football Lovers",
+      icon: "/football-lovers.png",
       description:
-        "Kpop Blog: Your ultimate source for all things K-pop! Get the latest news, reviews, and exclusive insights into the vibrant world of Korean pop music. Discover your favorite idols, explore diverse genres, and join a community of passionate K-pop enthusiasts. Stay connected with the heartbeat of Hallyu!",
-      link: "https://github.com/Isal-man/kpop-blog-fe",
+        "Football-lovers is a web application that provides the latest information about football, including news, scores, statistics and fixtures.",
+      link: "https://github.com/Isal-man/Web-Football-Lovers",
     },
     {
       id: 2,
-      name: "GeekTech Course",
-      icon: "/logo-geektech-course.png",
-      description:
-        "GeekTech Course: Unlock your inner geek and master the latest in technology. Dive into coding, robotics, AI, and more in this dynamic and hands-on program. Develop your skills, explore cutting-edge innovations, and unleash your potential in just a few weeks. Get ready to geek out!",
+      name: "Sistem Informasi Pesantren As-Shofa",
+      icon: "/pesantren.png",
+      description: "",
       link: "https://github.com/Isal-man/GeekTech-Course-fe",
-    },
-    {
-      id: 3,
-      name: "Smartphone-Blog",
-      icon: "/logo-smartphone-blog.png",
-      description:
-        "The Ultimate Smartphone Blog: Unleashing the latest in mobile technology! Stay updated on cutting-edge devices, expert reviews, industry news, and tips for optimizing your smartphone experience. Discover the future of communication in concise and engaging articles, all in one place.",
-      link: "https://github.com/Isal-man/smartphone-blog",
     },
   ]);
   const [mail, setMail] = useState("");
