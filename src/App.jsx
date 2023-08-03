@@ -2,8 +2,10 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
 // Components
-import { Footer, Header } from "./components";
+import { ButtonToTop, Footer, Header } from "./components";
 import { createContext } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 // context
 export const ThemeContext = createContext({
@@ -58,12 +60,18 @@ export const translate = {
 const App = () => {
   const [theme, setTheme] = useState("dark");
   const [language, setLanguage] = useState("en");
+  const scroll = useRef(null);
+
+  useEffect(() => {
+    console.log(`Berhasil mengubah tema menjadi ${theme === "dark" ? "gelap" : "terang"}`)
+  }, [theme])
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, language, setLanguage }}>
       <div className={`app-wrapper flex flex-col items-center h-full w-full ${theme === "dark" ? "bg-slate-800 text-white" : "bg-gray-100 text-black"}`}>
+        <ButtonToTop scrollRef={scroll} />
         <div className="header-wrapper max-w-screen-lg sm:w-full">
-          <Header />
+          <Header scrollRef={scroll}/>
         </div>
         <div className="content-wrapper flex-1 max-w-[1000px] w-full m-auto p-4 lg:h-screen">
           <Outlet />

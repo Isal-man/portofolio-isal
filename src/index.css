@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 .b-wrapper {
   position: relative;
   border: none;
@@ -25,6 +29,16 @@
 
 .b-animation:hover::after {
   transform: scale(1,1);
+}
+
+.pop-up {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.pop-down {
+  transform: scale(0);
+  transition: transform 0.3s ease;
 }
 
 .card {

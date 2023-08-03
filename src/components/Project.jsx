@@ -12,7 +12,7 @@ const Project = ({ id, name, description, icon, link}) => {
         className="object-cover w-24 h-24 md:w-28 md:h-28"
       />
       <div className={`detail flex flex-col items-center gap-1 md:items-start text-white`}>
-        <h1 className="text-xl font-bold">{name}</h1>
+        <h1 className="text-xl font-bold text-center">{name}</h1>
         <p>{description}</p>
       </div>
     </NavLink>

@@ -28,8 +28,8 @@ const Home = () => {
       id: 2,
       name: "Sistem Informasi Pesantren As-Shofa",
       icon: "/pesantren.png",
-      description: "",
-      link: "https://github.com/Isal-man/GeekTech-Course-fe",
+      description: "Islamic boarding school information system desktop applications are applications that help manage data and processes in Islamic boarding schools, such as data on students, parents of students, and teachers.",
+      link: "https://github.com/Isal-man/sistem-informasi-pesantren",
     },
   ]);
   const [mail, setMail] = useState("");
@@ -40,7 +40,7 @@ const Home = () => {
     <main className="flex flex-col gap-14">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-4 md:w-4/5">
-            <h1 className="font-bold text-3xl">{translate[language].hello} <span className="text-blue-400">Faisal 👋</span></h1>
+            <h1 className="font-bold text-3xl text-center">{translate[language].hello} <span className="text-blue-400">Faisal 👋</span></h1>
           <div className="flex flex-col gap-3">
             <h1 className="font-bold text-lg">
               Full stack developer: Builds both front-end and back-end of web

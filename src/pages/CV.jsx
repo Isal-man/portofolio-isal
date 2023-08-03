@@ -9,7 +9,7 @@ const CV = () => {
   return (
     <main className="flex flex-col gap-4">
       <div className="flex flex-col items-center gap-4">
-        <h1 className="text-3xl font-bold">Ahmad Faisal Hidayat</h1>
+        <h1 className="text-3xl font-bold text-center">Ahmad Faisal Hidayat</h1>
         <img
           src="/IMG_20230521_085205_323.jpg"
           className="object-cover h-1/2 w-1/2 rounded-full"
