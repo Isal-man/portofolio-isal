@@ -15,7 +15,7 @@ import { useContext } from "react";
 import { ThemeContext, translate } from "../App";
 
 const Home = () => {
-  const [projects, setProjects] = useState([
+  const projects = [
     {
       id: 1,
       name: "Football Lovers",
@@ -28,10 +28,19 @@ const Home = () => {
       id: 2,
       name: "Sistem Informasi Pesantren As-Shofa",
       icon: "/pesantren.png",
-      description: "Islamic boarding school information system desktop applications are applications that help manage data and processes in Islamic boarding schools, such as data on students, parents of students, and teachers.",
+      description:
+        "Islamic boarding school information system desktop applications are applications that help manage data and processes in Islamic boarding schools, such as data on students, parents of students, and teachers.",
       link: "https://github.com/Isal-man/sistem-informasi-pesantren",
     },
-  ]);
+    {
+      id: 3,
+      name: "Bookpedia (in the manufacturing stage)",
+      icon: "/logo-library.png",
+      description:
+        "Bookpedia is a web application that provides information about books, authors, and publishers. As well as displaying members and bookshelves.",
+      link: "",
+    },
+  ];
   const [mail, setMail] = useState("");
   const [textMail, setTextMail] = useState("");
   const { language } = useContext(ThemeContext);
@@ -40,7 +49,10 @@ const Home = () => {
     <main className="flex flex-col gap-14">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-4 md:w-4/5">
-            <h1 className="font-bold text-3xl text-center">{translate[language].hello} <span className="text-blue-400">Faisal 👋</span></h1>
+          <h1 className="font-bold text-3xl text-center">
+            {translate[language].hello}{" "}
+            <span className="text-blue-400">Faisal 👋</span>
+          </h1>
           <div className="flex flex-col gap-3">
             <h1 className="font-bold text-lg">
               Full stack developer: Builds both front-end and back-end of web
@@ -111,7 +123,7 @@ const Home = () => {
             />
           </label>
           <label>
-          {translate[language].letter}:
+            {translate[language].letter}:
             <textarea
               cols="2"
               rows="2"
@@ -129,7 +141,7 @@ const Home = () => {
               {translate[language].cancel}
             </button>
             <button className="bg-green-500 border border-green-500 p-2 rounded-lg hover:bg-transparent hover:cursor-pointer hover:border">
-            {translate[language].send}
+              {translate[language].send}
             </button>
           </div>
         </form>
